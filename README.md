@@ -11,7 +11,7 @@ In NW.js v0.34.0-beta a bug was introduced that causes the taskbar to display NW
 
 ![Gif of the bug](https://user-images.githubusercontent.com/4629794/97620291-bfc66980-19f7-11eb-823c-2a39f32c7100.gif)
 
-Currently the only solution is to use NW.js v0.33.4 or below. Idealy this bug would be fixed in NW.js itself, but in the mean time we could also build a workaround for it.
+**UPDATE:** This bug was fixed in NW.js v0.48.0!
 
 
 ## The idea
@@ -26,4 +26,4 @@ tray.on('click', function (evt) {
 });
 ```
 
-Using the x,y coords, you could spawn a custom frameless window that simulates a menu at that location. Frameless windows with `show_in_taskbar: false` will not cause this issue. This approach would also allow for much greater control over the rendering and interactivity of the menu.
+Using the x,y coords, you could spawn a custom frameless window that simulates a menu at that location. Frameless windows would have `show_in_taskbar: false`. This approach would also allow for much greater control over the rendering and interactivity of the menu.
